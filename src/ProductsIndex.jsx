@@ -15,7 +15,7 @@ export function ProductsIndex(props)
           <p>description: {product.description}</p>
           <p>is_discounted: {product.is_discounted}</p>
           <p>total: {product.total}</p>
-          <p>item_count: {product.item_count}</p>
+          {/* <p>item_count: {product.item_count}</p> */}
           <p> supplier_id: {product.supplier_id}</p> <br />
           <img src= {product.images[0] ? product.images[0].url :
             "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"} alt= ""
