@@ -2,6 +2,7 @@ import { ProductsIndex } from "./ProductsIndex";
 import  axios  from "axios";
 import { useState, useEffect } from "react";
 import { ProductsNew } from "./ProductsNew";
+import { Signup } from "./Signup";
 
 //call all functions inside of content
 export function Content() {
@@ -39,6 +40,7 @@ const handleCreateNewProduct=(params)=>{
     //  console.log(products);
   return (
     <main>
+      <div><Signup /></div>
       <div>
         <ProductsNew  onCreateNewProduct={handleCreateNewProduct}/>
       </div>
