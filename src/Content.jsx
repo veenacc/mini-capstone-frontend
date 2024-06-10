@@ -3,6 +3,8 @@ import  axios  from "axios";
 import { useState, useEffect } from "react";
 import { ProductsNew } from "./ProductsNew";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 
 //call all functions inside of content
 export function Content() {
@@ -41,6 +43,8 @@ const handleCreateNewProduct=(params)=>{
   return (
     <main>
       <div><Signup /></div>
+      <div><Login /></div>
+      <div><br /><LogoutLink /></div>
       <div>
         <ProductsNew  onCreateNewProduct={handleCreateNewProduct}/>
       </div>
