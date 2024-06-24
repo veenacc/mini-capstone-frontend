@@ -5,6 +5,7 @@ import { ProductsNew } from "./ProductsNew";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
+import { Routes, Route } from "react-router-dom";
 
 //call all functions inside of content
 export function Content() {
@@ -42,14 +43,23 @@ const handleCreateNewProduct=(params)=>{
     //  console.log(products);
   return (
     <main>
-      <div><Signup /></div>
-      <div><Login /></div>
-      <div><br /><LogoutLink /></div>
-      <div>
-        <ProductsNew  onCreateNewProduct={handleCreateNewProduct}/>
-      </div>
-      <div>
-        <ProductsIndex  products= {products} />
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<ProductsIndex  products= {products} />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Logout" element={<LogoutLink />} />
+          <Route path="/AddNewProduct" element={<ProductsNew  onCreateNewProduct={handleCreateNewProduct}/>} />
+        </Routes>
+        {/* <div><Signup /></div> */}
+        {/* <div><Login /></div>
+        <div><br /><LogoutLink /></div> */}
+        {/* <div>
+          <ProductsNew  onCreateNewProduct={handleCreateNewProduct}/>
+        </div> */}
+        {/* <div>
+          <ProductsIndex  products= {products} />
+        </div> */}
       </div>
       
     </main>

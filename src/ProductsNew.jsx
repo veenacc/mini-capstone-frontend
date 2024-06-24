@@ -6,12 +6,13 @@ export function ProductsNew(props) {
     event.preventDefault();
     console.log("form submitted");
     const params = new FormData(event.target);
+    // event.target.reset;
     props.onCreateNewProduct(params);
     // axios.post("http://localhost:3000/products.json", params).then (response=>{
       
     //   console.log(response.data)
     // });
-    event.target.reset;
+    // event.target.reset;
   }
   return (
     <div>
