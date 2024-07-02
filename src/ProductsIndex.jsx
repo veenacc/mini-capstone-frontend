@@ -42,13 +42,13 @@ export function ProductsIndex(props)
         {props.products.map(product =>
           <option key={product.id}>{product.name}</option>
           )}
-          {/* <option>app</option> */}
+          <option>app</option>
       </datalist>
 
       <div className="cards">
       
         {props.products
-          .filter(recipe => map((product) => (
+          .filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase())).map((product) => (
           <div key={product.id}className="products cards" >
             <p> id : {product.id}</p>
             <p>name: {product.name}</p>
